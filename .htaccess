@@ -1,0 +1,5 @@
+Options +FollowSymLinks -Indexes
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !^/index\.php$
+RewriteRule ^(admin)/?$ admin/index.php [L]
+RewriteRule ^([^/.]+)/?$ contents.php?cid=$1 [L]
